@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinFormsWebAPI.Testing">
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical" Padding="5,0,5,0">
+
+
+            <ListView x:Name="ListCliam"   BackgroundColor="white" SeparatorColor="Blue" HasUnevenRows="True" IsPullToRefreshEnabled="True" >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Padding="5,5" Orientation="Vertical" >
+                                <!--<StackLayout Padding="5,5" Orientation="Horizontal" >
+                                    <Label Text="Client ID: "></Label>
+                                    <Label Text="{Binding ClientID}" TextColor="Black" HorizontalOptions="StartAndExpand"></Label>
+                                </StackLayout>-->
+                                <Grid BackgroundColor="White"
+                                      
+                                      HeightRequest="20"/>
+
+                                <StackLayout Orientation="Vertical" Padding="10" BackgroundColor="#3897F0">
+
+
+
+                                    <Label
+                                                Grid.Row="0"
+                                                Grid.Column="0"
+                                                Margin="10,0,0,0"
+                                                FontSize="Small"
+                                                TextColor="White"
+                            
+                                                Text="{Binding UnpaidReason}" />
+
+                                    <Label
+                                                Grid.Row="0"
+                                                Grid.Column="0"
+                                                Margin="10,0,0,0"
+                                                FontSize="Small"
+                                                 TextColor="White"
+                                        
+                                                Text="{Binding Status1}" />
+
+                                    <Label
+                                                Grid.Row="0"
+                                                Grid.Column="0"
+                                                Margin="10,0,0,0"
+                                                FontSize="Small"
+                                                 TextColor="White"
+                                        
+                                                Text="{Binding Comments}" />
+
+
+
+
+                                </StackLayout>
+
+
+
+
+
+                                <!--<Button Clicked="ShowPopup" Text="Edit" BackgroundColor="#3897F0"></Button>-->
+                            </StackLayout>
+
+
+
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

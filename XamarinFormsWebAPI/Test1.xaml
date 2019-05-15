@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinFormsWebAPI.Test1">
+    <ContentPage.Content>
+        <StackLayout>
+            <!--<Label Text="Test1"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" /-->
+            <Button Text="Contact us"
+                    BackgroundColor="Teal"
+                    TextColor="White"
+                    FontSize="40"
+                    Clicked="MakeCallClicked"/>
+
+            <Button Text="Pick File"
+                   BackgroundColor="AliceBlue"
+                    TextColor="White"
+                    FontSize="40"
+                    Clicked="PickFile_Clicked"/>
+
+            <Button Text="Pick Photo"
+                   BackgroundColor="Teal"
+                    TextColor="White"
+                    FontSize="40"
+                    Clicked="PickPhoto_Clicked"/>
+
+            <Button Text="Take Photo"
+                   BackgroundColor="Teal"
+                    TextColor="White"
+                    FontSize="40"
+                    Clicked="Take_Clicked"/>
+
+            <Image x:Name="fileImage"
+                   WidthRequest="400"
+                   HeightRequest="220"/>
+
+            <Label x:Name="LocalPathLabel"
+                   TextColor="Black"
+                   FontSize="18"
+                    />
+            <Button Text="Upload Photo"
+                    BackgroundColor="Teal"
+                    TextColor="White"
+                    FontSize="40"
+                    Clicked="Button_Clicked"/>
+
+            <Label
+                x:Name="RemotePathLabel"
+                FontSize="20"
+                TextColor="Black"/>
+
+
+
+
+            <ImageButton Source="Cliams.png"
+                          BorderWidth="1" 
+                         BorderColor="White"
+                         HeightRequest="56"
+                         WidthRequest="56" 
+                         BackgroundColor="PowderBlue" 
+                         HorizontalOptions="Start"
+                         Clicked="ImageButton_Clicked"/>
+
+            <ImageButton Source="Person.png"
+                          BorderWidth="1" 
+                         BorderColor="White"
+                         HeightRequest="56"
+                         WidthRequest="56" 
+                         BackgroundColor="PowderBlue" 
+                         HorizontalOptions="Center"
+                         />
+
+            <ImageButton Source="vehicle.png"
+                          BorderWidth="1" 
+                         BorderColor="White"
+                         HeightRequest="56"
+                         WidthRequest="56" 
+                         BackgroundColor="PowderBlue" 
+                         HorizontalOptions="End"
+                        />
+
+            <ImageButton Source="Cliams2.png"
+                          BorderWidth="1" 
+                         BorderColor="White"
+                         HeightRequest="56"
+                         WidthRequest="56" 
+                         BackgroundColor="PowderBlue" 
+                         HorizontalOptions="Start"
+                        />
+
+
+
+
+        </StackLayout>
+
+    </ContentPage.Content>
+</ContentPage>

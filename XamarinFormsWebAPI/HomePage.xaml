@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinFormsWebAPI.HomePage">
+    <ContentPage.Content>
+      
+        <StackLayout StyleId="LoginForm">
+            <ListView x:Name="LoginListView" ItemSelected="LoginListView_ItemSelected">
+                <ListView.ItemTemplate>
+
+                    <DataTemplate>
+                        <ViewCell>
+
+                            <ViewCell.ContextActions>
+                                <MenuItem Text="Add" Clicked="Add_Clicked"></MenuItem>
+                                <MenuItem Text="Delete" Clicked="Delete_Clicked"></MenuItem>
+                                <MenuItem Text="Edit" Clicked="Edit_Clicked"></MenuItem>
+                            </ViewCell.ContextActions>
+
+                            <StackLayout>
+                     
+                                <StackLayout Padding="0,20,0,0" Orientation="Horizontal">
+                                    <Label Text="Username :  " />
+                                    <Label Text="{Binding Username}" />
+                                </StackLayout>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="Password :  " />
+                                    <Label Text="{Binding Password}" />
+                                </StackLayout>
+                                
+
+
+                             
+                                
+                            </StackLayout>
+
+
+                        </ViewCell>
+                    </DataTemplate>
+
+
+
+                </ListView.ItemTemplate>
+
+            </ListView>
+
+            <Entry x:Name="EntID" IsVisible="False" Placeholder="User Id"></Entry>
+           
+            <Entry x:Name="usernameEntry" Placeholder="Username"></Entry>
+           
+            <Entry  x:Name="passwordEntry"  Placeholder="Password" ></Entry>
+
+            <RelativeLayout HorizontalOptions="FillAndExpand">
+
+                <Button Text="Update" StyleClass="primary" Clicked="BtnUpdate_Clicked" 
+           />
+
+
+                <Button Text="Delete" StyleClass="primary" Clicked="BtnDelete_Clicked" RelativeLayout.XConstraint="{ConstraintExpression
+            Type=RelativeToParent,Property=Width,Factor=.6666,Constant=0}"
+            RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
+            Property=Width,Factor=.2222,Constant=0}"/>
+
+
+                
+            </RelativeLayout>
+
+
+           
+
+                <RelativeLayout>
+               
+
+
+            </RelativeLayout>
+           
+
+        </StackLayout>
+
+    </ContentPage.Content>
+
+</ContentPage>

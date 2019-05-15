@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinFormsWebAPI.HomeScreen">
+    <ContentPage.Content>
+        <StackLayout Padding="10">
+            <Frame Padding="0">
+                <StackLayout Orientation="Vertical" Spacing="10">
+
+                    <Grid RowSpacing="1" Padding="0,0,0,1" ColumnSpacing="1" BackgroundColor="White" HeightRequest="600" WidthRequest="600">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        <StackLayout Orientation="Vertical" BackgroundColor="White" Padding="8" HorizontalOptions="FillAndExpand">
+                            <ImageButton  Source="Assets/ContactUs.png"
+                        
+                                 BorderWidth="1" 
+                                 BorderColor="White"
+                                 HeightRequest="40"
+                                 WidthRequest="40" 
+                                 BackgroundColor="White" 
+                                 HorizontalOptions="Center"
+                                
+                                 Clicked="ImageButton_Clicked"
+                                 CommandParameter="{Binding .}"/>
+
+                            <Label Text="Contact Us" FontSize="Micro"  HorizontalTextAlignment="Center" />
+
+
+
+
+
+                        </StackLayout>
+
+                        <StackLayout Orientation="Vertical" BackgroundColor="White" Grid.Column="1" Padding="8" HorizontalOptions="FillAndExpand">
+                            <ImageButton  Source="Assets/Gpss.png"
+                        
+                                 BorderWidth="1" 
+                                 BorderColor="White"
+                                 HeightRequest="40"
+                                 WidthRequest="40" 
+                                 BackgroundColor="White" 
+                                 HorizontalOptions="Center"
+                                
+                                  Clicked="Location_Clicked"
+                                 CommandParameter="{Binding .}"/>
+                            <Label Text="Location" FontSize="Micro" HorizontalTextAlignment="Center" />
+
+                        </StackLayout>
+
+                        <StackLayout Orientation="Vertical" BackgroundColor="White" Padding="10" Grid.Row="1" HorizontalOptions="FillAndExpand">
+                            <ImageButton  Source="Assets/Cliams2.png"
+                        
+                                 BorderWidth="1" 
+                                 BorderColor="White"
+                                 HeightRequest="40"
+                                 WidthRequest="40" 
+                                 BackgroundColor="White" 
+                                 HorizontalOptions="Center"
+                                
+                                  Clicked="AddCliam_Clicked"
+                                 CommandParameter="{Binding .}"/>
+                            <Label Text="View Claim" FontSize="Micro"  HorizontalTextAlignment="Center"/>
+
+                        </StackLayout>
+
+                        <StackLayout Orientation="Vertical" BackgroundColor="White" Grid.Row="1" Grid.Column="1" Padding="10" HorizontalOptions="FillAndExpand">
+                            <ImageButton  Source="Assets/Road.png"
+                        
+                                 BorderWidth="1" 
+                                 BorderColor="White"
+                                 HeightRequest="40"
+                                 WidthRequest="40" 
+                                 BackgroundColor="White" 
+                                 HorizontalOptions="CenterAndExpand"
+                                
+                                 
+                                 CommandParameter="{Binding .}"/>
+                            <Label Text="Roadside Assistance" FontSize="Micro"  HorizontalTextAlignment="Center"/>
+                        </StackLayout>
+
+
+                        <!--<StackLayout Orientation="Vertical" BackgroundColor="White" Grid.Row="2" HorizontalOptions="FillAndExpand">
+                                <Image Source="" HorizontalOptions="CenterAndExpand"/>
+                                <Label Text="Photo5" FontSize="Small" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center"/>
+
+                            </StackLayout>
+
+                            <StackLayout Orientation="Vertical" BackgroundColor="White" Grid.Row="2" Grid.Column="1" Padding="10" HorizontalOptions="FillAndExpand">
+                                <Image Source="" HorizontalOptions="CenterAndExpand"/>
+                                <Label Text="Photo6" FontSize="Small" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center"/>
+
+                            </StackLayout>-->
+
+                    </Grid>
+
+
+                </StackLayout>
+
+
+
+            </Frame>
+
+
+
+
+
+        </StackLayout>
+
+        <!--</ScrollView>-->
+    </ContentPage.Content>
+</ContentPage>

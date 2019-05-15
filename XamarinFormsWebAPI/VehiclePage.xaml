@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            
+             x:Class="XamarinFormsWebAPI.VehiclePage"
+             Title="Vehicle Information">
+
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical" Padding="5,0,5,0">
+
+
+            <ListView x:Name="listVehicle"  ItemSelected="ListVehicle_ItemSelected"  BackgroundColor="white" SeparatorColor="Blue" HasUnevenRows="True" IsPullToRefreshEnabled="True" >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Padding="5,5" Orientation="Vertical" >
+                                <!--<StackLayout Padding="5,5" Orientation="Horizontal" >
+                                    <Label Text="Client ID: "></Label>
+                                    <Label Text="{Binding ClientID}" TextColor="Black" HorizontalOptions="StartAndExpand"></Label>
+                                </StackLayout>-->
+
+
+                                <StackLayout Padding="5,5" Orientation="Horizontal" >
+                                    <Label Text="Make: "></Label>
+                                    <Label Text="{Binding Make}" TextColor="Black" HorizontalOptions="StartAndExpand"></Label>
+                                </StackLayout>
+
+                                <StackLayout Padding="5,5" Orientation="Horizontal" >
+                                    <Label Text="License Plate: "></Label>
+                                    <Label Text="{Binding LicensePlate}" TextColor="Black" HorizontalOptions="StartAndExpand"></Label>
+                                </StackLayout>
+
+                                <StackLayout Padding="5,5" Orientation="Horizontal" >
+                                    <Label Text="Year: "></Label>
+                                    <Label Text="{Binding Year}" TextColor="Black" HorizontalOptions="StartAndExpand"></Label>
+                                </StackLayout>
+
+                                <StackLayout Padding="5,5" Orientation="Horizontal" >
+                                    <Label Text="Variant: "></Label>
+                                    <Label Text="{Binding Variant}" TextColor="Black" HorizontalOptions="StartAndExpand"></Label>
+                                </StackLayout>
+
+                                <StackLayout Padding="5,5" Orientation="Horizontal" >
+                                    <Label Text="Model: "></Label>
+                                    <Label Text="{Binding Model}" TextColor="Black" HorizontalOptions="StartAndExpand"></Label>
+                                </StackLayout>
+                                <StackLayout Padding="5,5" Orientation="Horizontal" >
+                                    <Label Text="Accessories Value: "></Label>
+                                    <Label Text="{Binding AccessoriesValue}" TextColor="Black" HorizontalOptions="StartAndExpand"></Label>
+                                </StackLayout>
+
+                                <ImageButton  Source="Assets/Cliams2.png"
+                        
+                                 BorderWidth="1" 
+                                 BorderColor="White"
+                                 HeightRequest="40"
+                                 WidthRequest="40" 
+                                 BackgroundColor="White" 
+                                 HorizontalOptions="End"
+                                 Clicked="ImageButton_Clicked"
+                                 CommandParameter="{Binding .}"/>
+
+                                <!--<Button Clicked="ShowPopup" Text="Edit" BackgroundColor="#3897F0"></Button>-->
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

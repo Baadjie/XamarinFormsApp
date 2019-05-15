@@ -1,0 +1,173 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinFormsWebAPI.ClientPage">
+    <ContentPage.Content>
+
+
+
+        <StackLayout StyleId="LoginForm">
+
+
+
+            <Label Text="Client Page" Grid.Row="0" Grid.Column="2" FontSize="26" ></Label>
+
+
+            <ListView x:Name="ClientListView"  ItemSelected="ClientListView_ItemSelected" >
+                <ListView.ItemTemplate>
+
+                    <DataTemplate>
+                        <ViewCell>
+
+
+                            <StackLayout>
+
+                                <StackLayout Padding="0,20,0,0" Orientation="Horizontal">
+                                    <Label Text="Username :  " />
+                                    <Label Text="{Binding EmailAddress}" />
+                                    <!--<Entry Text="{Binding EmailAddress}"></Entry>-->
+
+                                </StackLayout>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="FirstName :  " />
+                                    <Label Text="{Binding FirstName}" />
+                                    <!--<Entry x:Name="txtName" Placeholder="FirstName"></Entry>-->
+                                </StackLayout>
+                                <StackLayout Padding="0,20,0,0" Orientation="Horizontal">
+                                    <Label Text="LastName :  " />
+                                    <Label Text="{Binding LastName}" />
+                                    <!--<Entry x:Name="txtSurname" Placeholder="LastName"></Entry>-->
+                                </StackLayout>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="Gender :  " />
+                                    <Label Text="{Binding IsMale}" />
+                                    <!--<Entry x:Name="usernamy" Placeholder="IsMale"></Entry>-->
+                                </StackLayout>
+
+                                <StackLayout Padding="0,20,0,0" Orientation="Horizontal">
+                                    <Label Text="Title :  " />
+                                    <Label Text="{Binding TitleId}" />
+                                    <!--<Entry  Placeholder="TitleId"></Entry>-->
+                                </StackLayout>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="DateOfBirth :  " />
+                                    <Label Text="{Binding DateOfBirth}" />
+                                    <!--<Entry  Placeholder="DateOfBirth"></Entry>-->
+                                </StackLayout>
+
+                                <StackLayout Padding="0,20,0,0" Orientation="Horizontal">
+                                    <Label Text="MaritalStatus :  " />
+                                    <Label Text="{Binding MaritalStatusId}" />
+                                    <!--<Entry  Placeholder="MaritalStatusId"></Entry>-->
+                                </StackLayout>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="IdentityNo :  " />
+                                    <Label Text="{Binding IdentityNo}" />
+                                    <!--<Entry  Placeholder="IdentityNo"></Entry>-->
+                                </StackLayout>
+                                <StackLayout Padding="0,20,0,0" Orientation="Horizontal">
+                                    <Label Text="HomeAddress :  " />
+                                    <Label Text="{Binding HomeAddress}" />
+                                    <!--<Entry  Placeholder="HomeAddress"></Entry>-->
+                                </StackLayout>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="HomeSurburb :  " />
+                                    <Label Text="{Binding HomeSurburb}" />
+                                    <!--<Entry  Placeholder="HomeSurburb"></Entry>-->
+                                </StackLayout>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="HomePostalCode :  " />
+                                    <Label Text="{Binding HomePostalCode}" />
+                                    <!--<Entry  Placeholder="HomePostalCode"></Entry>-->
+                                </StackLayout>
+
+
+                                <StackLayout Padding="0,20,0,0" Orientation="Horizontal">
+                                    <Label Text="BusinessPhone :  " />
+                                    <Label Text="{Binding BusinessPhone}" />
+                                    <!--<Entry  Placeholder="BusinessPhone"></Entry>-->
+                                </StackLayout>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="MobilePhone :  " />
+                                    <Label Text="{Binding MobilePhone}" />
+                                    <!--<Entry  Placeholder="MobilePhone"></Entry>-->
+                                </StackLayout>
+                                <StackLayout Padding="0,20,0,0" Orientation="Horizontal">
+                                    <Label Text="ITCCheck :  " />
+                                    <Label Text="{Binding ITCCheck}" />
+                                    <!--<Entry  Placeholder="ITCCheck"></Entry>-->
+                                </StackLayout>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="Occupation :  " />
+                                    <Label Text="{Binding Occupation}" />
+                                    <!--<Entry  Placeholder="Occupation"></Entry>-->
+                                </StackLayout>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="Category :  " />
+                                    <Label Text="{Binding Category}" />
+                                    <!--<Entry  Placeholder="Category"></Entry>-->
+                                </StackLayout>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="SequestratedOrLiquidated :  " />
+                                    <Label Text="{Binding SequestratedOrLiquidated}" />
+                                    <!--<Entry  Placeholder="SequestratedOrLiquidated"></Entry>-->
+                                </StackLayout>
+
+
+
+                                <StackLayout Padding="0,20,0,0" Orientation="Horizontal">
+                                    <Label Text="City :  " />
+                                    <Label Text="{Binding City}" />
+                                    <!--<Entry  Placeholder="City"></Entry>-->
+                                </StackLayout>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="Comment :  " />
+                                    <Label Text="{Binding Comment}" />
+                                    <!--<Entry  Placeholder="Comment"></Entry>-->
+                                </StackLayout>
+                                <StackLayout Padding="0,20,0,0" Orientation="Horizontal">
+                                    <Label Text="ClientStatusId :  " />
+                                    <Label Text="{Binding ClientStatusId}" />
+                                    <!--<Entry  Placeholder="ClientStatusId"></Entry>-->
+                                </StackLayout>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="CompanyName :  " />
+                                    <Label Text="{Binding CompanyName}" />
+                                    <!--<Entry  Placeholder="CompanyName"></Entry>-->
+                                </StackLayout>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="PassportNumber :  " />
+                                    <Label Text="{Binding PassportNumber}" />
+                                    <!--<Entry  Placeholder="PassportNumber"></Entry>-->
+                                </StackLayout>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="UnderDebtReview :  " />
+                                    <Label Text="{Binding UnderDebtReview}" />
+                                    <!--<Entry  Placeholder="UnderDebtReview"></Entry>-->
+                                </StackLayout>
+                            </StackLayout>
+
+
+                        </ViewCell>
+                    </DataTemplate>
+
+
+
+                </ListView.ItemTemplate>
+
+            </ListView>
+
+
+
+
+            <RelativeLayout>
+
+                <Entry x:Name="txtID" IsVisible="False" Placeholder="User Id"></Entry>
+
+
+            </RelativeLayout>
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

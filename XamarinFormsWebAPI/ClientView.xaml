@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<pages:PopupPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinFormsWebAPI.ClientView"
+                   xmlns:animations="clr-namespace:Rg.Plugins.Popup.Animations;assembly=Rg.Plugins.Popup"
+                 xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup">
+
+    <pages:PopupPage.Animation>
+        <animations:ScaleAnimation DurationIn="400"
+                                   DurationOut="300"
+                                   EasingIn="SinOut"
+                                   EasingOut="SinIn"
+                                   HasBackgroundAnimation="True"
+                                   PositionIn="Center"
+                                   PositionOut="Center"
+                                   ScaleIn="1.2"
+                                   ScaleOut="0.8" />
+    </pages:PopupPage.Animation>
+    <StackLayout>
+        <ListView x:Name="listVehicle"  BackgroundColor="white" SeparatorColor="Blue" HasUnevenRows="True" IsPullToRefreshEnabled="True" >
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <StackLayout Padding="5,5" Orientation="Vertical" >
+                        <StackLayout Padding="5,5" Orientation="Horizontal" >
+                            <Label Text="Client ID: "></Label>
+                            <Label Text="{Binding ClientID}" TextColor="Black" HorizontalOptions="StartAndExpand"></Label>
+                        </StackLayout>
+
+                        <StackLayout Padding="5,5" Orientation="Horizontal" >
+                            <Label Text="Make: "></Label>
+                            <Label Text="{Binding Make}" TextColor="Black" HorizontalOptions="StartAndExpand"></Label>
+                        </StackLayout>
+
+                        <StackLayout Padding="5,5" Orientation="Horizontal" >
+                            <Label Text="License Plate: "></Label>
+                            <Label Text="{Binding LicensePlate}" TextColor="Black" HorizontalOptions="StartAndExpand"></Label>
+                        </StackLayout>
+
+                        <StackLayout Padding="5,5" Orientation="Horizontal" >
+                            <Label Text="Year: "></Label>
+                            <Label Text="{Binding Year}" TextColor="Black" HorizontalOptions="StartAndExpand"></Label>
+                        </StackLayout>
+
+                        <StackLayout Padding="5,5" Orientation="Horizontal" >
+                            <Label Text="Variant: "></Label>
+                            <Label Text="{Binding Variant}" TextColor="Black" HorizontalOptions="StartAndExpand"></Label>
+                        </StackLayout>
+
+                        <StackLayout Padding="5,5" Orientation="Horizontal" >
+                            <Label Text="Model: "></Label>
+                            <Label Text="{Binding Model}" TextColor="Black" HorizontalOptions="StartAndExpand"></Label>
+                        </StackLayout>
+                        <StackLayout Padding="5,5" Orientation="Horizontal" >
+                            <Label Text="Accessories Value: "></Label>
+                            <Label Text="{Binding AccessoriesValue}" TextColor="Black" HorizontalOptions="StartAndExpand"></Label>
+                        </StackLayout>
+                        <!--<Button Clicked="ShowPopup" Text="Edit" BackgroundColor="#3897F0"></Button>-->
+                    </StackLayout>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+    </StackLayout>
+
+    <!--<StackLayout BackgroundColor="White">
+
+        <Label Text="Update vehicle details"  HorizontalTextAlignment="Start" HorizontalOptions="FillAndExpand" Margin="5" />
+    
+        <StackLayout Padding="0,20,0,0" Orientation="Horizontal">
+            <Label Text="Email Adreess :  "  FontSize="16" />
+
+            <Entry x:Name="txtEmailAddress" IsReadOnly="True" Placeholder="Email Adreess" PlaceholderColor="#bababa" FontSize="16"/>
+            <Label Text="ClientID :  "  FontSize="16" />
+            <Entry x:Name="EntID"  IsReadOnly="True"  Placeholder="txtClientID" PlaceholderColor="#bababa" FontSize="16"/>
+        </StackLayout>
+        <StackLayout Padding="0,20,0,0" Orientation="Horizontal">
+            <Label Text="FirstName :  "  FontSize="16" />
+            <Entry x:Name="txtFirstName"  Placeholder="FirstName" PlaceholderColor="#bababa" FontSize="16"/>
+            <Label Text="LastName :  "  FontSize="16" />
+            <Entry x:Name="txtLastName"  Placeholder="LastName" PlaceholderColor="#bababa" FontSize="16"/>
+        </StackLayout>
+        <StackLayout Padding="0,20,0,0" Orientation="Horizontal">
+            <Label Text="Gender :  "  FontSize="16" />
+            <Entry x:Name="txtGender"  Placeholder="Gender " PlaceholderColor="#bababa" FontSize="16"/>
+       
+            <Label Text="Title :  "  FontSize="16" />
+            <Entry x:Name="txtTitle"  Placeholder="Title" PlaceholderColor="#bababa" FontSize="16"/>
+        </StackLayout>
+
+        <StackLayout Padding="0,20,0,0" Orientation="Horizontal">
+            <Label Text="DateOfBirth :  "  FontSize="16" />
+            <Entry x:Name="txtDateOfBirth"  Placeholder="DateOfBirth" PlaceholderColor="#bababa" FontSize="16"/>
+            <Label Text="MaritalStatuse :  "  FontSize="16" />
+            <Entry x:Name="txtMaritalStatus"  Placeholder="MaritalStatuse" PlaceholderColor="#bababa" FontSize="16"/>
+        </StackLayout>
+        <StackLayout Padding="0,20,0,0" Orientation="Horizontal">
+            <Entry x:Name="txtIdNumber"  Placeholder="IdNumber" PlaceholderColor="#bababa" FontSize="16"/>
+            <Entry x:Name="txtPassportNumber"  Placeholder="PassportNumber" PlaceholderColor="#bababa" FontSize="16"/>
+            
+        </StackLayout>
+        <StackLayout Padding="0,20,0,0" Orientation="Horizontal">
+            <Entry x:Name="txtHomeAdress"  Placeholder="HomeAdress" PlaceholderColor="#bababa" FontSize="16"/>
+            <Entry x:Name="txtHomeSuburg"  Placeholder="HomeSuburb" PlaceholderColor="#bababa" FontSize="16"/>
+          
+        </StackLayout>
+
+        <StackLayout Padding="0,20,0,0" Orientation="Horizontal">
+            <Entry x:Name="txtCity"  Placeholder="City" PlaceholderColor="#bababa" FontSize="16"/>
+            <Entry x:Name="txtHomePostalCode"  Placeholder="HomePostalCode " PlaceholderColor="#bababa" FontSize="16"/>
+        </StackLayout>
+      
+        <StackLayout Padding="0,20,0,0" Orientation="Horizontal">
+            <Entry x:Name="txtBusinessPhone"  Placeholder="BusinessPhone" PlaceholderColor="#bababa" FontSize="16"/>
+            <Entry x:Name="txtMobilePhone"  Placeholder="MobilePhone" PlaceholderColor="#bababa" FontSize="16"/>
+        </StackLayout>
+        <StackLayout Padding="0,20,0,0" Orientation="Horizontal">
+            <Entry x:Name="txtITCCheck"  Placeholder="ITCCheck" PlaceholderColor="#bababa" FontSize="16"/>
+            <Entry x:Name="txtOccupation"  Placeholder="Occupation" PlaceholderColor="#bababa" FontSize="16"/>
+        </StackLayout>
+        <StackLayout Padding="0,20,0,0" Orientation="Horizontal">
+            <Entry x:Name="txtCategory"  Placeholder="Category" PlaceholderColor="#bababa" FontSize="16"/>
+            <Entry x:Name="txtSequestratedOrLiquidated"  Placeholder="SequestratedOrLiquidated" PlaceholderColor="#bababa" FontSize="16"/>
+
+        </StackLayout>
+
+
+        
+        <StackLayout Padding="0,20,0,0" Orientation="Horizontal">
+
+            <Entry x:Name="txtCompanyName"  Placeholder="CompanyName" PlaceholderColor="#bababa" FontSize="16"/>
+
+            <Entry x:Name="txtUnderDebtReview"  Placeholder="UnderDebtReview" PlaceholderColor="#bababa" FontSize="16"/>
+            <Entry x:Name="txtClientStatusId"  Placeholder="ClientStatusId" PlaceholderColor="#bababa" FontSize="16"/>
+        </StackLayout>
+        
+        <Entry x:Name="txtComment"  Placeholder="Comment" PlaceholderColor="#bababa" FontSize="16"/>
+
+
+        <StackLayout Padding="0,20,0,0" Orientation="Horizontal">
+            <Button Text="Update" StyleClass="primary" Clicked="BtnUpdate_Clicked" />
+
+        </StackLayout>
+       
+           
+
+    </StackLayout>-->
+   
+</pages:PopupPage>

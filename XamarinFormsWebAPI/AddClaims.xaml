@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinFormsWebAPI.AddClaims"
+              Title="Add Claim">
+
+
+
+    <ScrollView>
+        
+        
+ 
+    <StackLayout Orientation="Vertical">
+
+      
+        <Button Clicked="PickFile_Clicked" Text="Pick File" BackgroundColor="#3897F0" TextColor="White" HeightRequest="45" VerticalOptions="Start" />
+        <Label x:Name="LocalPathLabel"
+                   TextColor="Black"
+                   FontSize="10"
+               HeightRequest="20"
+                    />
+            
+
+            <Button Text="Take Photo"
+                   BackgroundColor="#3897F0"
+                    TextColor="White"
+                    HeightRequest="45"
+                    Clicked="Take_Clicked"/>
+
+
+
+            <Image x:Name="fileImage"
+                   WidthRequest="50"
+                   HeightRequest="50"/>
+
+            <Button Text="Uploud Photo"
+                   BackgroundColor="#3897F0"
+                    TextColor="White"
+                    HeightRequest="45"
+                    Clicked="PhotoUploadClicked"/>
+
+            <Button Clicked="Button_Clicked" Text="Upload File" FontSize="15" BackgroundColor="#3897F0" TextColor="White" HeightRequest="45" VerticalOptions="Start" />
+        <Label
+                x:Name="RemotePathLabel"
+                FontSize="10"
+                TextColor="Black" HeightRequest="20"/>
+
+        <Picker x:Name="txtStatus1" Title="Retention Type" SelectedIndexChanged="OnSubStatusChosen"  HeightRequest="45">
+            <Picker.Items>
+                <x:String>Claims</x:String>
+                <x:String>Query</x:String>
+            </Picker.Items>
+        </Picker>
+        <Picker x:Name="txtStatus" Title="Retention Status" ItemsSource="{Binding RetentionStatus}" ItemDisplayBinding="{Binding RetentionStatus}"  HeightRequest="45">
+        </Picker>
+
+
+       
+        <Entry x:Name="txtComment" Placeholder="Comment"/>
+
+
+        <Button x:Name="btnClaim" Clicked="btnClaim_clicked"  Text="Claim" BackgroundColor="#3897F0" TextColor="White" HeightRequest="45" VerticalOptions="Start" />
+
+    </StackLayout>
+
+
+
+    </ScrollView>
+</ContentPage>

@@ -1,0 +1,200 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinFormsWebAPI.UserTabbedPage">
+  <!--Pages can be added as references or inline-->
+    <ContentPage Title="Personal Info" Icon="images" >
+        <StackLayout Orientation="Vertical" Padding="5,0,5,0">
+            <ListView x:Name="ClientListView" ItemSelected="ClientListView_ItemSelected"  BackgroundColor="white" SeparatorColor="Blue" HasUnevenRows="True"  IsPullToRefreshEnabled="True"  >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Padding="5,5" Orientation="Vertical" >
+                                <StackLayout Padding="5,5" Orientation="Horizontal" >
+                                    <Label Text="Username :  " />
+                                    <Label Text="{Binding EmailAddress}" />
+                                  
+                                </StackLayout>
+
+                                <StackLayout Padding="5,5" Orientation="Horizontal" >
+                                    <Label Text="FirstName :  " />
+                                    <Label Text="{Binding FirstName}" />
+                                 
+                                </StackLayout>
+
+                                <StackLayout Padding="5,5" Orientation="Horizontal" >
+                                    <Label Text="LastName :  " />
+                                    <Label Text="{Binding LastName}" />
+                        
+                                </StackLayout>
+
+                                <StackLayout Padding="5,5" Orientation="Horizontal" >
+                                    <Label Text="Gender :  " />
+                                    <Label Text="{Binding IsMale}" />
+                             
+                                </StackLayout>
+
+                                <StackLayout Padding="5,5" Orientation="Horizontal" >
+                                    <Label Text="Title :  " />
+                                    <Label Text="{Binding TitleId}" />
+                             
+                                </StackLayout>
+
+                                <StackLayout Padding="5,5" Orientation="Horizontal" >
+                                    <Label Text="DateOfBirth :  " />
+                                    <Label Text="{Binding DateOfBirth}" />
+                     
+                                </StackLayout>
+                                <StackLayout Padding="5,5" Orientation="Horizontal" >
+                                    <Label Text="MaritalStatus :  " />
+                                    <Label Text="{Binding MaritalStatusId}" />
+                                  
+                                </StackLayout>
+
+
+                                <StackLayout Padding="5,5" Orientation="Horizontal" >
+                                    <Label Text="IdentityNo :  " />
+                                    <Label Text="{Binding IdentityNo}" />
+                                  
+                                </StackLayout>
+
+                                <StackLayout Padding="5,5" Orientation="Horizontal" >
+                                    <Label Text="HomeAddress :  " />
+                                    <Label Text="{Binding HomeAddress}" />
+                        
+                                </StackLayout>
+
+                                <StackLayout Padding="5,5" Orientation="Horizontal" >
+                                    <Label Text="HomeSurburb :  " />
+                                    <Label Text="{Binding HomeSurburb}" />
+                                
+                                </StackLayout>
+
+                                <StackLayout Padding="5,5" Orientation="Horizontal" >
+                                    <Label Text="HomePostalCode :  " />
+                                    <Label Text="{Binding HomePostalCode}" />
+                              
+                                </StackLayout>
+
+                                
+                                <StackLayout Padding="5,5" Orientation="Horizontal" >
+                                    <Label Text="BusinessPhone :  " />
+                                    <Label Text="{Binding BusinessPhone}" />
+                                  
+                                </StackLayout>
+
+                                <StackLayout Padding="5,5" Orientation="Horizontal" >
+                                    <Label Text="MobilePhone :  " />
+                                    <Label Text="{Binding MobilePhone}" />
+                    
+                                </StackLayout>
+                                <StackLayout Padding="5,5" Orientation="Horizontal" >
+                                    <Label Text="ITCCheck :  " />
+                                    <Label Text="{Binding ITCCheck}" />
+                               
+                                </StackLayout>
+                                 <StackLayout Padding="5,5" Orientation="Horizontal" >
+                                    <Label Text="SequestratedOrLiquidated :  " />
+                                    <Label Text="{Binding SequestratedOrLiquidated}" />
+                                </StackLayout>
+
+                                <StackLayout Padding="5,5" Orientation="Horizontal" >
+                                    <Label Text="City :  " />
+                                    <Label Text="{Binding City}" />
+                                </StackLayout>
+
+                                <StackLayout Padding="5,5" Orientation="Horizontal" >
+                                    <Label Text="Comment :  " />
+                                    <Label Text="{Binding Comment}" />
+                                </StackLayout>
+
+                                <StackLayout Padding="5,5" Orientation="Horizontal" >
+                                    <Label Text="ClientStatusId :  " />
+                                    <Label Text="{Binding ClientStatusId}" />
+                                </StackLayout>
+
+                                <StackLayout Padding="5,5" Orientation="Horizontal" >
+                                    <Label Text="CompanyName :  " />
+                                    <Label Text="{Binding CompanyName}" />
+                                </StackLayout>
+
+                                <StackLayout Padding="5,5" Orientation="Horizontal" >
+                                    <Label Text="PassportNumber :  " />
+                                    <Label Text="{Binding PassportNumber}" />
+                                </StackLayout>
+                                <StackLayout Padding="5,5" Orientation="Horizontal" >
+                                    <Label Text="UnderDebtReview :  " />
+                                    <Label Text="{Binding UnderDebtReview}" />
+                                </StackLayout>
+                   
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+
+    </ContentPage>
+
+    <ContentPage Title="Vehicle Information" Icon="vehicle.png" >
+       
+      
+        <StackLayout Orientation="Vertical" Padding="5,0,5,0">
+
+            
+            <ListView x:Name="listVehicle"  BackgroundColor="white" SeparatorColor="Blue" HasUnevenRows="True" IsPullToRefreshEnabled="True" >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Padding="5,5" Orientation="Vertical" >
+                                <StackLayout Padding="5,5" Orientation="Horizontal" >
+                                    <Label Text="Client ID: "></Label>
+                                    <Label Text="{Binding ClientID}" TextColor="Black" HorizontalOptions="StartAndExpand"></Label>
+                                </StackLayout>
+
+                                <StackLayout Padding="5,5" Orientation="Horizontal" >
+                                    <Label Text="Make: "></Label>
+                                    <Label Text="{Binding Make}" TextColor="Black" HorizontalOptions="StartAndExpand"></Label>
+                                </StackLayout>
+
+                                <StackLayout Padding="5,5" Orientation="Horizontal" >
+                                    <Label Text="License Plate: "></Label>
+                                    <Label Text="{Binding LicensePlate}" TextColor="Black" HorizontalOptions="StartAndExpand"></Label>
+                                </StackLayout>
+
+                                <StackLayout Padding="5,5" Orientation="Horizontal" >
+                                    <Label Text="Year: "></Label>
+                                    <Label Text="{Binding Year}" TextColor="Black" HorizontalOptions="StartAndExpand"></Label>
+                                </StackLayout>
+
+                                <StackLayout Padding="5,5" Orientation="Horizontal" >
+                                    <Label Text="Variant: "></Label>
+                                    <Label Text="{Binding Variant}" TextColor="Black" HorizontalOptions="StartAndExpand"></Label>
+                                </StackLayout>
+
+                                <StackLayout Padding="5,5" Orientation="Horizontal" >
+                                    <Label Text="Model: "></Label>
+                                    <Label Text="{Binding Model}" TextColor="Black" HorizontalOptions="StartAndExpand"></Label>
+                                </StackLayout>
+                                <StackLayout Padding="5,5" Orientation="Horizontal" >
+                                    <Label Text="Accessories Value: "></Label>
+                                    <Label Text="{Binding AccessoriesValue}" TextColor="Black" HorizontalOptions="StartAndExpand"></Label>
+                                </StackLayout>
+                                <!--<Button Clicked="ShowPopup" Text="Edit" BackgroundColor="#3897F0"></Button>-->
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+  
+    </ContentPage>
+
+    <ContentPage Title="Cliams"  Icon="Cliams.png">
+        <Label Text="Iam Tab 1"
+               HorizontalOptions="Center"
+               VerticalOptions="Center">
+
+        </Label>
+    </ContentPage>
+</TabbedPage>

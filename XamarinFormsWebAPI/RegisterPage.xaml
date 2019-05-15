@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinFormsWebAPI.RegisterPage">
+
+
+
+    <ContentPage.Content>
+        <StackLayout>
+            <Entry Placeholder="FirstName" x:Name="txtFirstname"/>
+            <Entry  x:Name="txtLastname" Placeholder="LastName"/>
+            <Entry x:Name="txtname" Placeholder="Example@gmail.com"/>
+           
+            <!--<Entry x:Name="txtIsMale" Placeholder="Gender"/>-->
+            <Label Text="  Select Gender... " TextColor="Gray"></Label>
+            <Picker  x:Name="txtGender" HorizontalOptions="FillAndExpand">
+                <Picker.Items>
+                    <x:String>Male</x:String>
+                    <x:String>Female</x:String>
+                </Picker.Items>
+            </Picker>
+            <Entry  x:Name="txtpassword"  IsPassword="True"  Placeholder="Password"/>
+            <Entry  x:Name="txtConfirmpassword"  IsPassword="True"  Placeholder="Confirm Password"/>
+            <Button Text="Registrtion" x:Name="btnRegister" BackgroundColor="#3897F0" TextColor="White" HeightRequest="50" VerticalOptions="Start" />
+
+        </StackLayout>
+    </ContentPage.Content>
+
+
+
+</ContentPage>
+
